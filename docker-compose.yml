@@ -1,0 +1,10 @@
+version: '2'
+services:
+  jenkins:
+    image: registry:2
+    container_name: registry
+    volumes:
+      - /workspace/docker_registry/registry:/var/lib/registry
+    ports:
+      - "5000:5000"
+    restart: always
